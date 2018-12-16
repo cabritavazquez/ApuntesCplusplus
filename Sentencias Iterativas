@@ -1,0 +1,56 @@
+1º Sentencia FOR
+
+   La utilizaremos cuando sabemos el número exacto de iteraciones que tenemos que dar. (Esquema de recorrido)
+
+   4 pasos:
+   
+    1- Inicio: se utiliza para declarar la variable que controla el bucle
+    2- Condición: mientras se cumple esta, el bucle se seguirá ejecutando
+    3- Sentencias: codigo a ejecutar reitaradas veces
+    4- Incremento: se utiliza para modificar la variable del bucle
+    
+    //////////////////////////
+    
+    for (<inicio> ; <condicion> ; <incremento>){
+        ///
+        /// Sentencias
+        ///
+    }
+    
+    //////////////////////////    
+    
+   
+2º Sentencia WHILE
+
+   La utilizaremos cuando desconocemos el numero de iteraciones que debemos dar. (Esquema de búsqueda)
+   
+    //////////////////////////
+    
+    while (<condicion>){
+        ///
+        /// Sentencias
+        ///
+    }
+    
+    //////////////////////////
+    
+3º Sentencia DO-WHILE
+
+   A diferencia con el while, en este siempre entraremos al menos 1 vez a ejecutar el código. 
+   Y lo seguiremos haciendo hasta que se deje de cumplir la condición.
+  
+    //////////////////////////
+    do {
+        ///
+        /// Sentencias
+        ///    
+    }
+    while (<condicion>);
+    
+    //////////////////////////  
+   
+
+
+
+NOTA: Tanto en el while como en el do-while, tendremos que hacer la iteración nosotros dentro del bucle,
+no como en el for que lo hacemos en la misma linea donde lo declaramos.
