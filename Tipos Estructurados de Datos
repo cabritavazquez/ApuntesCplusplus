@@ -1,0 +1,103 @@
+1. Registros. Registros jerarquizados.
+
+  Tipo de dato estructurado estático que puede tener componentes (campos) de distinto tipo.
+  Sigue el siguiente esquema:
+
+////////////////////////////////////////////////   
+
+    struct <nombre_registro> {
+      <tipo> <nombre_campo1>
+      <tipo> <nombre_campo1>
+      <tipo> <nombre_campo1>
+      <tipo> <nombre_campo1>
+    };
+    
+////////////////////////////////////////////////   
+    
+  Haremos un ejemplo de declaración e inicialización del struct alumno:
+  
+////////////////////////////////////////////////   
+
+    // Declaración de tipos ( lo declaramos fuera del main() )
+    struct alumno {
+      char nombre[20];
+      int edad;
+      int DNI;
+      char sexo;
+    };
+    
+   int main () {
+      alumno a , b; // declaración
+      a.nombre = "Luis"; // sentencias de asignación
+      a.edad = 20;  // sentencias de asignación
+      a.DNI = 1234;  // sentencias de asignación
+      a.sexo = H;  // sentencias de asignación
+      
+      b = a; // copia de registros completos
+      
+      cout << "Nombre de alumno: " << a.nombre << endl;  // mostrar campos del
+                                                         // registro por pantalla
+                                                         
+   }
+   
+//////////////////////////////////////////////// 
+   
+2. Tablas. (arrays)
+
+  Listas de elementos de un mismo tipo.
+  Declaración:
+  <tipo> <nombre_variable>[<número_de_elementos];
+  
+  ////////////////////////////////////////////////
+  
+    ...
+    int main(){
+      float notas[10]; //lista de 10 notas
+      char pablabra[20]; //lista de 20 palabras
+      ...
+      return 0;
+    }
+    
+  ////////////////////////////////////////////////
+  
+  ¿Cómo accedo a los elementos de una lista?
+
+  ////////////////////////////////////////////////
+  
+    int main(){
+      cout << notas[0] << endl; //sacará por pantalla la primera variable de tipo float de la lista notas
+      notas[1] = 9; //asignará el valor 9 a la segunda variable de tipo float de la lista notas
+      
+      //Nuestra lista notas (float notas[10]) tendrá 10 elementos 
+      //de tipo float que desde el notas[0] al notas[9].
+    
+      ...
+      return 0;
+    }    
+    
+  ////////////////////////////////////////////////
+  
+    
+  Podemos hacer listas bidimensionales, tridimensionales...
+  
+  ////////////////////////////////////////////////    
+  
+    int main(){
+      int matriz[10][10]; //tendremos una matriz de 10x10 de enteros
+      // Inicialización de la matriz mediante buclue for anidado
+      for(int i = 0; i < 10; i++){
+        for(int j = 0; j < 10; j++){
+          matriz[i][j] = 0;
+        }
+      }
+      // Sacar por pantalla nuestra matriz 
+      for(int i = 0; i < 10; i++){
+        for(int j = 0; j < 10; j++){
+          cout << matriz[i][j] << " ";
+        }
+        cout << endl; // para hacer una salto de linea con cada fila de la matriz
+      }     
+     
+   ////////////////////////////////////////////////
+   
+   Podemos hacer lista de registros también
