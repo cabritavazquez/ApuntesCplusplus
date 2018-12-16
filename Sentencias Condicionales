@@ -1,0 +1,52 @@
+Las sentencias condicionales se utilizan para ejecutar determinadas Sentencias o bloques de Sentencias en función de una condición
+
+Sentencia IF
+
+  Solo si la condición es verdadera ejecutaremos el código asociado, en caso de que sea falsa, pasará a ejecutar la siguiente instrucción.
+  
+  ////////////////////
+  
+  if (<condición>){
+    // si la condición es verdadera ejecutaremos este código
+  }
+  
+  ////////////////////
+  
+Sentencia IF-ELSE
+
+  Si la condición es verdadera ejecutaremos el código asociado al if, en caso de que sea falsa, 
+  pasará a ejecutar el código asociado al else.
+  
+  ////////////////////
+  
+  if (<condición>){
+    // si la condición es verdadera ejecutaremos este código
+  }else{
+    // si la condición es falsa ejecutaremos este código
+  }
+  
+  ////////////////////
+  
+Sentencia SWITCH
+  Funcionará como una correlación de if-else, y lo usaremos para casos en los que el resultado 
+  de una expresicón deba compararse con diferentes valores.
+  Ira comparando variable_a_comparar con valor1, valor2... hasta que sea igual a alguno de ellos y 
+  ejecutará su codigo o en caso de que no sea igual a ninguno de ellos, entrará a ejecutar el código de default.
+  ////////////////////
+    
+  switch(<variable_a_comparar>)
+  {
+     case valor1:
+        // codigo1 a ejecutar
+     break;
+     case valor2:
+        // codigo2 a ejecutar
+     break;
+     case valorN:
+        // codigoN a ejecutar
+     break;
+     default:
+        // codigoN+1 a ejecutar
+  }
+  
+  ////////////////////
