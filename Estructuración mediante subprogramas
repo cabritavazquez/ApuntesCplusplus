@@ -1,0 +1,61 @@
+1. Diseño estructurado
+
+  Utilizaremos los subprogramas para conseguir una resolución más sencilla de este.
+  
+  ////////////////////////////////////////////////////////////////////////////////////
+  
+  float obtener_nota();
+  void imprimir_calificacion(float );
+  int main(){
+    float nota;
+    nota = obtener_nota(); // llamada al subalgoritmo obtener_nota()
+    imprimir_calificacion(nota); // llamada al subalgoritmo imprimir_calificacion(float)
+    return 0;
+  }
+  
+ float obtener_nota(){
+     float a;
+     do{
+        cout << "Introduzca calificación:" << endl;
+        cin >> a;
+     }while(a<0.0 || a>10.0);
+     return a;
+ }
+ 
+ float imprimir_calificacion(float c){
+    if(c < 5.0){
+      cout << "Suspenso." << endl;
+    }else if(c < 7.0){
+      cout << "Aprobado." << endl;
+    }else if(c < 9.0){
+      cout << "Notable." << endl;
+    }else{
+      cout << "Sobresaliente." << endl;
+    }
+ }
+ 
+ Al hacer una llamada a un subalgoritmo, el programa pasará a ejecutar dicha parte del código y después volverá por 
+ donde iba.
+ 
+ 2. Tipos de parámetros
+ 
+  Antes de diseñar nuestro subprograma tendremos que considerar dos cosas muy importantes:
+    - ¿Qué información del programa principal (main) necesita conocer el subprograma para poder trabajar correctamente?
+    - ¿Qué información producirá el subprograma llamado después de que se llame?
+    
+  Tipos de parámetros *muy importante tener claro*
+  
+  -> Por valor
+    El valor del parámetro se copia en una variable del subprograma.
+    Si el parámetro actual es una variable, esta no se modificará.
+    Los parámetros reales pueden ser una variable, una constante o una expresión.
+    Se usa más memoria.
+    
+  -> Por referencia
+    El parámetro real sólo puede ser una variable.
+    Si el parámetro formal se modifica, también se modifica la variable. (parametro actual).
+    Se pasa la dirección de memoria de la variable.
+    Se usa menos memoria.
+  
+ 3. Ámbitos de parámetros y funciones
+ 
