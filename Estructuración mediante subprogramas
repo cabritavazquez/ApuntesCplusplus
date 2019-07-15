@@ -1,9 +1,13 @@
 1. Diseño estructurado
 
-  Utilizaremos los subprogramas para conseguir una resolución más sencilla de este.
+La aplicación de este principio al desarrollo de programas permite seguir un enfoque de refinamientos sucesivos: 
+en cada fase del diseño del programa ignoramos los detalles secundarios y nos centramos en lo que nos interesa en 
+ese momento; en fases posteriores abordamos los detalles que hemos ignorado por el momento. 
+De esta forma, al final tenemos un diseño completo, obtenido con menor esfuerzo y de forma más segura.
+
+Ejemplo de uso de subprogramas:
   
-  ////////////////////////////////////////////////////////////////////////////////////
-  
+   /////////////////////////////////////////////////////////////////////////////////////////  
   float obtener_nota();
   void imprimir_calificacion(float );
   int main(){
@@ -34,6 +38,8 @@
     }
  }
  
+   ///////////////////////////////////////////////////////////////////////////////////////// 
+ 
  Al hacer una llamada a un subalgoritmo, el programa pasará a ejecutar dicha parte del código y después volverá por 
  donde iba.
  
@@ -57,5 +63,34 @@
     Se pasa la dirección de memoria de la variable.
     Se usa menos memoria.
   
- 3. Ámbitos de parámetros y funciones
+ 3. Funciones y procedimientos
+ 
+ Podemos distinguir dos tipos de subprogramas según lo que devuelven:
+ 
+ -> Procedimientos:
+   Estos se utilizan para revolver un problema computacional general. Por ejemplo ordenador dos números,
+   para rellenar o mostrar una tabla.
+   Serán de tipo void (vacio), por lo tanto no devolveran nada.
+   Un procedimiento constituye por sí solo una sentencia independiente que pueder ser utilizada en el cuerpo del otro 
+   subprograma o en el principal. La única forma de intercambiar información es a través de los parámetros usados en la
+   llamada.
+   
+   /////////////////////////////////////////////////////////////////////////////////////////
+   
+   void mostrarLista(int p[10]){
+      for(int i = 0; i < 10; i++){
+          cout << p[i] << endl;
+      }
+   }
+   
+   /////////////////////////////////////////////////////////////////////////////////////////
+   
+  
+-> Funciones:
+   Estos se utilizaran para realizar un cálculo computacional y generar un resultado único.
+   El valor devuelto será del mismo tipo del que es la función.
+   Una función no constituye por sí sola una sentencia, por lo que debe aparecer dentro de alguna sentencia que utilice el
+   valor resultado de la función. La información se intercambia a través de los parámetros y mediante el valor devuelto por
+   la función.
+
  
