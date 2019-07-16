@@ -8,6 +8,7 @@ De esta forma, al final tenemos un diseño completo, obtenido con menor esfuerz
 Ejemplo de uso de subprogramas:
   
    /////////////////////////////////////////////////////////////////////////////////////////  
+   
   float obtener_nota();
   void imprimir_calificacion(float );
   int main(){
