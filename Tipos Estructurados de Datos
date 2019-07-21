@@ -46,7 +46,7 @@
 
   Listas de elementos de un mismo tipo.
   Declaración:
-  <tipo> <nombre_variable>[<número_de_elementos];
+  <tipo> <nombre_variable>[<número_de_elementos>];
   
   ////////////////////////////////////////////////
   
@@ -58,6 +58,24 @@
       return 0;
     }
     
+  ////////////////////////////////////////////////
+  
+  Otra forma de hacerlo es definiendo tipos y lo haremos de la siguiente
+  forma:
+  
+    typedef array < <tipo>, <número_de_elementos> > <nombre_varible>;
+    
+  Lo haremos generalmente fuera del main, ya que estamos definiento un tipo nuevo,
+  y dentro del main lo que haremos será declarar nuestra variable de este nuevo tipo.
+  
+  ////////////////////////////////////////////////
+  
+    typedef array <int,6> Lista; // definimos el nuevo tipo Lista
+    
+    int main(){
+      Lista l; // declaracion de nuestra variable l
+    }
+  
   ////////////////////////////////////////////////
   
   ¿Cómo accedo a los elementos de una lista?
@@ -76,7 +94,6 @@
     }    
     
   ////////////////////////////////////////////////
-  
     
   Podemos hacer listas bidimensionales, tridimensionales...
   
@@ -84,6 +101,17 @@
   
     int main(){
       int matriz[10][10]; //tendremos una matriz de 10x10 de enteros
+      /*
+      *   otra forma sería creando un tipo TMatriz fuera del main:
+      *
+      *   typedef array <int,10> TFilas;   
+      *   typedef array <TFilas,10> TMatriz;
+      *
+      *   y dentro, declaramos una variable de este tipo:
+      *   
+      *   TMatriz m;
+      */
+      
       // Inicialización de la matriz mediante buclue for anidado
       for(int i = 0; i < 10; i++){
         for(int j = 0; j < 10; j++){
